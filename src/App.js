@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import { useState } from "react";
+import "./App.css";
 
-function App() {
+const App = () => {
+  let initialState = false;
+  const [hide, setHide] = useState(initialState);
+
+  var onHideClick = () => {
+    setHide(!hide);
+  };
+  var styles = hide ? "hide" : "visible";
+  console.log(hide);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <>
+      <button onClick={onHideClick}>{hide ? "visibe" : "hide"} Story</button>
+      <div className={styles}>
+        <h1>Hello World</h1>
+        <h1>This is Page was created to remember the forgotten Hero. </h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {" "}
+          There lived a Hero named "Aaryan" in the 15th century. The story
+          starts from the time of invasion
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      </div>
+    </>
   );
-}
+};
 
 export default App;
