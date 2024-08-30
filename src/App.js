@@ -22,6 +22,10 @@ const App = () => {
           There lived a Hero named "Aaryan" in the 15th century. The story
           starts from the time of invasion
         </p>
+        <p>
+          okay I need to start believing (I am not particularly sure about the
+          spelling believe) in one self.
+        </p>
       </div>
     </>
   );
